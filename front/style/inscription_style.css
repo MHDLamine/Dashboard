@@ -1,0 +1,61 @@
+*
+{
+    font-family: 'Imprima';
+}
+body
+{
+    background-image: url("../../img/dune-du-pilat.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h3
+{
+    font-size: 33px;
+    color: #14A3C2;
+    text-align: center;
+}
+
+.container
+{
+    background-color: #EBF4ED;
+    box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 20px;
+    width: 45%;
+    margin-top: 10%;
+}
+/* .larg
+{
+    width: 30%;
+} */
+.col-md-6{
+    position: relative;
+  
+}
+.form-label{
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background-color:#EBF4ED;
+}
+.form-control, #role{
+    background-color: #EBF4ED;
+    outline: none;
+}.form-control:focus:not(.btn)
+{
+    background-color: #EBF4ED;
+}
+#user:hover
+{
+    background-color: #EBF4ED;
+}
+#submit
+{
+    background-color: #14A3C2;
+    color: #FFFFFF;
+}
+.rqr
+{
+    color: red;
+}
+    
