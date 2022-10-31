@@ -1,3 +1,5 @@
+<?php include "../../back/serveur_inscription.php" ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,52 +20,67 @@
 
     <div class="container larg">
         <h3>Page d'inscription</h3>
+        <?php
+        if (isset($rendu)) {
+            foreach ($rendu as $rendu) {
+                echo '<div class="rendu">'.$rendu.'</div>';
+            }
+        }
+
+        ?>
         </br>
-            <form action="" class="row g-2 " id="form">
+            <form action="" method="post" class="row g-2 " id="form"  enctype="multipart/form-data">
                 <div  class="col-md-6" class="form-floating">
-                <label for="prenom" class="form-label">Prénom <span class="rqr">*</span> </label>
+                <label for="prenom" class="form-label" >Prénom <span id="prenomlab">*</span> </label>
                 <input type="text"  onkeyup="prenomf();" class="form-control" name="prenom" id="prenom" >
+                <span class="message"></span>
                 </br>
                 </div>
                 <div class="col-md-6">
-                <label for="nom" class="form-label">Nom<span class="rqr">*</span> </label>
+                <label for="nom" class="form-label">Nom<span id="nomlab">*</span> </label>
                 <input type="text" class="form-control" id="nom" name="nom" onkeyup="nomf();">
+                <span class="message"></span>
                 </br>
                 </div>
                 <div class="col-md-6">
-                <label for="email" class="form-label">Email<span class="rqr">*</span></label>
+                <label for="email" class="form-label">Email<span id="emaillab">*</span></label>
                 <input type="text" class="form-control" name="email" id="email"  onkeyup="emailf();">
+                <span class="message"></span>
                 </br>
                 </div>
                 <div class="col-md-6">
-                <label for="role" class="form-label">Role<span class="rqr">*</span></label>
+                <label for="role" class="form-label">Role<span id="rolelab">*</span></label>
                 <select class="form-select" name="role" id="role"  onclick="rolef();">
+                <span class="message"></span>
                 <option selected>selectionner</option>
                 <option value="administrateur">Administrateur</option>
                 <option value="utilisateur">Utilisateur</option>
                 </select>
+                <span class="message"></span>
                 </br>
                 </div>
                 <div class="col-md-6">
-                <label for="mdp" class="form-label">Mot de passe <span class="rqr">*</span></label>
+                <label for="mdp" class="form-label">Mot de passe <span id="mdplab">*</span></label>
                 <input type="password" class="form-control" name="mdp" id="mdp"   onkeyup="mdpf();">
+                <span class="message"></span>
                 </br>
                 </div>
                 <div class="col-md-6">
-                <label for="confirm_mdp" class="form-label">confirmer le mot de passe <span class="rqr">*</span></label>
-                <input type="password" class="form-control" name="confirm_mdp" id="confirm_mdp"   onkeyup="confirm_mdpf();">
+                <label for="confirm_mdp" class="form-label">confirmer le mot de passe <span id="mdpclab">*</span></label>
+                <input type="password" class="form-control" id="confirm_mdp"   onkeyup="confirm_mdpf();">
+                <span class="message"></span>
                 </br>
                 </div>
                 <div class="col-md-6">
                  <label class="form-label">Upload</label>
-                 <input type="file" class="form-control" name="file" onkeyup="filef();" id="file">
-                 </br>
+                 <input type="file" class="form-control" name="img" id="image" accept="image/jpg, image/png, image/jpeg">
+                 <span class="message"></span>
                  </div>
-                <div class="col-md-12">
-                <input type="submit" id="submit" class="form-control" disabled>
+                <div class="col-md-6">
+                <input type="submit" name="submit" id="submit" class="form-control" value="inscription"  disabled>
                 </div>
             </form>
-  
+        <a href="../../index.php"><h5>Se connecter ?</h5></a>
     </div>
 
 <script src="script.js"></script>

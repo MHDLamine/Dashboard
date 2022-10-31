@@ -1,0 +1,54 @@
+*
+{
+    box-sizing: border-box;
+}
+body{
+    background-color: #14A3C2;
+}
+.col
+{
+    background-color: #ECBC90;
+}
+.d-flex
+{
+    position: relative;
+}
+.form-control
+{
+    border-radius: 0px;
+    height: 29px;
+    background-color: #EBF4ED;
+    outline: #EBF4ED;
+    width: 200px;
+}
+.btn-search
+{
+    height: inherit;
+    width:30px;
+    background-color: #ECBC90;
+}
+.tbody
+{
+    background-color: #EBF4ED;
+}
+.table:not(caption)
+{
+    border-bottom: 5px;
+    border-color: #14A3C2;
+}
+.action
+{
+    width: 130px;
+}
+.action_div
+{
+    display:flex;justify-content:space-between;
+}
+a:hover
+{
+    color: #EBF4ED;
+}
+.view
+{
+    display: none;
+}

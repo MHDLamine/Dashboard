@@ -15,18 +15,13 @@ h3
     color: #14A3C2;
     text-align: center;
 }
-.rendu
-{
-    text-align: center;
-    color: red;
-}
 h5
 {
     color: #14A3C2;
     width: auto;
     margin-top: 6px;
 }
-.right a
+a
 {
     text-decoration: none;
 }
@@ -36,8 +31,8 @@ h5
     box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.25);
     padding: 10px;
     border-radius: 20px;
-    width: 45%;
-    margin-top: 10%;
+    width: 25%;
+    margin-top: 15%;
 }
 @media screen and (max-width:900px) {
     .container
@@ -51,7 +46,7 @@ h5
 }
 }
 
-.col-md-6{
+.col-md-12{
     position: relative;
   
 }

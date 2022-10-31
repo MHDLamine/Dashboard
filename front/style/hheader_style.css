@@ -1,0 +1,60 @@
+*
+{
+    font-family: 'Imprima';
+    box-sizing: border-box;
+}
+.container-fluid
+{
+    width: 92%;
+}
+.left
+{
+    display: flex;
+}
+.back
+{
+ background-color: #EBF4ED;
+ height: 90px;
+ box-shadow: 1px 1px 1px rgba(83, 77, 77, 0.997);
+}
+.right a 
+{
+    text-decoration: none;
+    margin-right: 10px;
+}
+.img
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: orange;
+}
+.img img
+{
+    width: inherit;
+    height: inherit;
+    border-radius:inherit;
+}
+.name p
+{
+    margin-left:15px;
+}
+
+
+
+p,a
+{
+    color: #14A3C2;
+}
+a:hover
+{
+    color: black;
+}
+#name
+{
+    font-weight: bold;
+}
+.view
+{
+    display: none;
+}

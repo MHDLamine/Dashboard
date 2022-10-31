@@ -137,33 +137,10 @@ class verification
 }
 submit = document.getElementById("submit");
 
-function prenomf()
-{
-    var prenom = new verification ("prenom",0,0)
-    prenom.result();
-    nb = prenom.result();
-    prenomlab.classList.remove("valid");
-    if (nb == 2) {
-        prenomlab.classList.add("valid");
-        validate ()
-    }
-}
 
-function nomf()
-{
-    var nom = new verification ("nom",0,1)
-    nom.result();
-    nb =  nom.result();
-    nomlab.classList.remove("valid");
-    validate ()
-    if (nb == 2) {
-        nomlab.classList.add("valid");
-        validate ()
-    }
-}
 function emailf()
 {
-    var email = new verification ("email",0,2)
+    var email = new verification ("email",0,0)
     email.resultMailCorrect();
     nb = email.resultMailCorrect();
     emaillab.classList.remove("valid");
@@ -173,21 +150,10 @@ function emailf()
         validate ()
     }
 }
-function rolef()
-{
-    var role = new verification ("role",0,3)
-    role.resultRoleCorrect();
-    nb = role.resultRoleCorrect();
-    rolelab.classList.remove("valid");
-    validate ()
-    if (nb == 2) {
-        rolelab.classList.add("valid");
-        validate ()
-    }
-}
+
 function mdpf()
 {
-    var mdp = new verification ("mdp",0,4)
+    var mdp = new verification ("mdp",0,1)
     mdp.resultmdp();
     nb = mdp.resultmdp();
     mdplab.classList.remove("valid");
@@ -197,19 +163,6 @@ function mdpf()
         validate ()
     }
 }
-function confirm_mdpf()
-{
-    var confirm_mdp = new verification ("confirm_mdp",0,5)
-    confirm_mdp.resultmdpconfirm();
-    nb = confirm_mdp.resultmdpconfirm();
-    mdpclab.classList.remove("valid");
-    validate ()
-    if (nb == 2) {
-        mdpclab.classList.add("valid");
-        validate ()
-    }
-}
-
 /*
  Si le saisie en cours est correct il appelle la fonction validate qui va mettre la classe valid à l'input
 */
@@ -224,7 +177,7 @@ mdpclab = document.getElementById("mdpclab");
 function validate () {
     valid = document.getElementsByClassName("valid").length;
     console.log(valid)
-    if (valid == 6) {
+    if (valid == 2) {
         submit.disabled = false;
         submit.style.backgroundColor= "#14A3C2";
         console.log(valid)
