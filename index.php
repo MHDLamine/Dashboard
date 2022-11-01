@@ -20,11 +20,13 @@
     <div class="container larg">
         <h3>Page de connexion</h3>
         <?php
-        foreach ($message as $message) {
+        if (isset($message)) {
+              foreach ($message as $message) {
         
             echo '<div style="margin-bottom:10px; color:red; text-align:center;">'. $message.'</div>';
             
         }
+    }
         ?>
         </br>
             <form action="" method="post" class="row g-2 " id="form">

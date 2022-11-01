@@ -44,11 +44,7 @@ body{
 {
     display:flex;justify-content:space-between;
 }
-a:hover
-{
-    color: #EBF4ED;
-}
-.view
+.no
 {
     display: none;
 }

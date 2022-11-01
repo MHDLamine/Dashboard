@@ -5,7 +5,7 @@
 }
 .container-fluid
 {
-    width: 92%;
+    width: 91%;
 }
 .left
 {
@@ -28,12 +28,14 @@
     height: 60px;
     border-radius: 50%;
     background-color: orange;
+    
 }
 .img img
 {
     width: inherit;
     height: inherit;
     border-radius:inherit;
+    border: 2px solid #14A3C2;
 }
 .name p
 {
@@ -53,8 +55,4 @@ a:hover
 #name
 {
     font-weight: bold;
-}
-.view
-{
-    display: none;
 }

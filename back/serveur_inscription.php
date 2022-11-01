@@ -38,14 +38,14 @@ if(isset($_POST['submit']))
     }
     else {
     
-        $insert = "INSERT INTO `users` (`prenom`, `nom`, `email`, `role`, `mdp`,`image`,`matricule`) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $insert = "INSERT INTO `users` (`prenom`, `nom`, `email`, `role`, `mdp`,`image`) VALUES (?, ?, ?, ?, ?, ?)";
 
         $insertion = $conn->prepare($insert);
-        $insertion->execute([ $prenom, $nom, $email, $role, $mdp, $image,$matricule ]);
+        $insertion->execute([ $prenom, $nom, $email, $role, $mdp, $image]);
         if ($insertion) {
             move_uploaded_file($emplacement_tmp, $emplacement_local);
         }
-        $matricule =  'TP-'. $conn->lastInsertId();
+        $matricule =  'TP-2022-'. $conn->lastInsertId();
         $mat = "UPDATE  users SET matricule = '$matricule' WHERE email = '$email'";
         $modification = $conn->prepare($mat);
         $modification->execute(); 
