@@ -20,10 +20,4 @@
             $req->execute();
             header('location:../front/login/admin/admin.php');
         }
-      
-    
-        
-   
-    
-
-?>
+    ?>

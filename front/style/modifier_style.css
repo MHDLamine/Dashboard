@@ -1,0 +1,81 @@
+*
+{
+    font-family: 'Imprima';
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #14A3C2;
+}
+h3
+{
+    font-size: 33px;
+    color: #14A3C2;
+    text-align: center;
+}
+.rendu
+{
+    text-align: center;
+    color: red;
+}
+h5
+{
+    color: #14A3C2;
+    width: auto;
+    margin-top: 6px;
+}
+.right a
+{
+    text-decoration: none;
+}
+.container
+{
+    background-color: #EBF4ED;
+    padding: 10px;
+    width: 45%;
+    margin-top: 10%;
+}
+@media screen and (max-width:900px) {
+    .container
+{
+   
+    box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    border-radius: 0px;
+    width: 100%;
+    margin-top: 0%;
+}
+}
+
+.col-md-6{
+    position: relative;
+  
+}
+.form-label{
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background-color:#EBF4ED;
+    padding-bottom: 0px;
+}
+.form-control, #role{
+    background-color: #EBF4ED;
+    outline: none;
+}.form-control:focus:not(.btn)
+{
+    background-color: #EBF4ED;
+}
+#user:hover
+{
+    background-color: #EBF4ED;
+}
+#submit
+{
+    background-color: #0087a45e;
+    color: #FFFFFF;
+}
+#prenomlab, #nomlab, #emaillab, #mdplab, #rolelab,#mdpclab
+{
+    color: red;
+}
+    

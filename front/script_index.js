@@ -176,15 +176,15 @@ mdpclab = document.getElementById("mdpclab");
 
 function validate () {
     valid = document.getElementsByClassName("valid").length;
-    console.log(valid)
+   
     if (valid == 2) {
         submit.disabled = false;
         submit.style.backgroundColor= "#14A3C2";
-        console.log(valid)
+
     }
     else{
         submit.style.backgroundColor= "#0087a45e";
         submit.disabled = true;
-        console.log(valid)
+  
     }
    }

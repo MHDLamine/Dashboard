@@ -1,6 +1,6 @@
 <?php  include "../../../back/config.php" ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -58,7 +58,6 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
     <div class="right">
         <a href="admin.php" id="user">Utilisateur</a>
         <a href="liste_archive.php"  id="archive">Archive</a>
-        <a href="#" id="compte">compte</a>
         <a href="../../../back/serveur_deconnexion.php?logout=1">
         <svg width="30" height="41" viewBox="0 0 46 51" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g style="mix-blend-mode:darken">
