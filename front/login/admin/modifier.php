@@ -46,7 +46,7 @@
                 </br>
                 </div>
                 <div class="col-md-6">
-                <input type="submit" name="submit" id="submit" class="form-control" value="inscription">
+                <input type="submit" style="background-color: #14A3C2;" name="submit" id="submit" class="form-control" value="inscription">
                 </div>
             </form>
     </div>

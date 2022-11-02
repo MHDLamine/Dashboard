@@ -47,6 +47,7 @@
             <th scope="col">Email</th>
             <th scope="col">Matricule</th>
             <th scope="col">Rôle</th>
+            <th scope="col">date d'inscription</th>
             </tr>
         </thead>
     <tbody  class="tbody">
@@ -77,6 +78,7 @@
           <?php
           };
           ?>
+          <td><?= $row['date_inscription']; ?></td>
         </tr>
         
         <?php
@@ -104,12 +106,13 @@ else if ($row) {
         {
           ?>
         <td><?= $row['role']; ?></td>
+
+     
           <?php
           };
           ?>
-
+        <td><?= $row['date_inscription']; ?></td>
         </tr>
-        
         <?php
             };
          }

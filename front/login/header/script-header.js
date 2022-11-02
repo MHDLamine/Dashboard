@@ -1,4 +1,4 @@
-/*class activeLink
+class activeLink
     {
         constructor(elementActive,other1, other2)
         {
@@ -32,4 +32,4 @@
         var active3 = new activeLink("compte", "user","archive")
         active3.styler()
     }
-    */
+    

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style/inscription_style.css">
+    <link rel="stylesheet" href="../style/iinscription_style.css">
     <title>inscription</title>
 </head>
 <body>
@@ -80,7 +80,7 @@
                 <input type="submit" name="submit" id="submit" class="form-control" value="inscription"  disabled>
                 </div>
             </form>
-        <a href="../../index.php"><h5>Se connecter ?</h5></a>
+             <a id="conn" href="../../index.php">Se connecter ?</a>
     </div>
 
 <script src="script.js"></script>

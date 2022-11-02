@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="front/style/iindex_style.css">
+    <link rel="stylesheet" href="front/style/index_style.css">
     <title>inscription</title>
 </head>
 <body>
@@ -48,7 +48,7 @@
                 </div>
                 </div>
             </form>
-        <a href="front/inscription/inscription.php"><h5>J'ai pas de compte ?</h5></a>
+        <a href="front/inscription/inscription.php">J'ai pas de compte ?</a>
     </div>
     
 <script src="front/script_index.js"></script>
