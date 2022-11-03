@@ -48,7 +48,9 @@ if(isset($_POST['submit']))
         $matricule =  'TP-2022-'. $conn->lastInsertId();
         $mat = "UPDATE  users SET matricule = '$matricule' WHERE email = '$email'";
         $modification = $conn->prepare($mat);
-        $modification->execute(); 
+        $modification->execute();
+        $rendu[] = "";
+        $correct = "connexion réussi" ;
        
     }  
 }

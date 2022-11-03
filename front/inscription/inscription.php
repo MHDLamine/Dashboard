@@ -26,7 +26,9 @@
                 echo '<div class="rendu">'.$rendu.'</div>';
             }
         }
-
+        if (isset($correct)) {
+        echo '<div class="ok">'.$correct.'</div>';
+        }
         ?>
         </br>
             <form action="" method="post" class="row g-2 " id="form"  enctype="multipart/form-data">
@@ -77,9 +79,10 @@
                  <span class="message"></span>
                  </div>
                 <div class="col-md-6">
-                <input type="submit" name="submit" id="submit" class="form-control" value="inscription"  disabled>
+                <input onclick="redirection()" type="submit" name="submit" id="submit" class="form-control" value="inscription"  disabled>
                 </div>
             </form>
+        </br>
              <a id="conn" href="../../index.php">Se connecter ?</a>
     </div>
 

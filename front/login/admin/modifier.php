@@ -18,6 +18,9 @@
 </head>
 <body>
     <div class="container">
+        <?php if (isset($md)) {
+            echo '<p id =\"para\">'.$md. '</p>';
+        }  ?>
         <h5 style="text-align:center;padding:10px 0px;">Modifier</h5>
     <?php
      $id = $_GET['id'];
@@ -46,10 +49,11 @@
                 </br>
                 </div>
                 <div class="col-md-6">
-                <input type="submit" style="background-color: #14A3C2;" name="submit" id="submit" class="form-control" value="inscription">
+                <input onclick="alert('modifier')" type="submit" style="background-color: #14A3C2;" name="submit" id="submit" class="form-control" value="inscription">
                 </div>
             </form>
     </div>
+
     <script src="../../inscription/script.js"></script>
 </body>
 </html>

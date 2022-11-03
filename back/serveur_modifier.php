@@ -15,6 +15,6 @@
         $modifier = "UPDATE users SET prenom = '$prenom', nom = '$nom', email = '$email' WHERE id = $id";
         $up = $conn->prepare($modifier);
         $up->execute();
-        header('location:admin.php');
+        $md = "Données modifier";
     }
 ?>

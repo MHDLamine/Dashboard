@@ -135,6 +135,8 @@ class verification
         }
     }
 }
+
+
 submit = document.getElementById("submit");
 
 function prenomf()

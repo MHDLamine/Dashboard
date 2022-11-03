@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="front/style/index_style.css">
-    <title>inscription</title>
+    <title>connexion</title>
 </head>
 <body>
 
@@ -44,7 +44,7 @@
                 </div> 
                 </br>      
                 <div class="col-md-12">
-                <input type="submit" name="submit" id="submit" class="form-control" value="connexion"  disabled>
+                <input style="margin-bottom:10px;" type="submit" name="submit" id="submit" class="form-control" value="connexion"  disabled>
                 </div>
                 </div>
             </form>

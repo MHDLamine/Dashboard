@@ -2,7 +2,7 @@
     if (isset($_GET['search'])) {
      if ($_GET['search'] != ""){
         $search = $_GET['search'];
-        $sql = "SELECT * from users WHERE etat = 1  AND id != $id AND matricule lIKE '%$search%' LIMIT 7";
+        $sql = "SELECT * from users WHERE etat = 1  AND id != $id AND matricule lIKE '%$search%' OR email like '%$search%' LIMIT 7";
         $select = $conn->prepare($sql);
         $select->execute();
         $row = $select->fetchAll(PDO::FETCH_ASSOC); }

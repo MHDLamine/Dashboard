@@ -9,7 +9,11 @@ body
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+.ok
+{
+    color: green;
+    text-align: center;
+}
 h3
 {
     font-size: 33px;
@@ -38,7 +42,7 @@ h3
     padding: 10px;
     border-radius: 20px;
     width: 45%;
-    margin-top: 10%;
+    margin-top: 6%;
 }
 @media screen and (max-width:900px) {
     .container
