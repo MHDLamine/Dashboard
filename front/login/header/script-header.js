@@ -33,3 +33,57 @@ class activeLink
         active3.styler()
     }
     
+
+    //pop pup pour notification
+
+    class notification 
+        {
+            constructor(txt, action)
+            {
+                this.txt = txt;
+                this.action = action;
+    
+            }
+            alerter()
+            {
+                document.getElementById('txt').innerHTML = this.txt;
+                document.getElementById('action').innerHTML = this.action;
+            }
+            invisible ()
+            {
+                document.getElementById('anul').classList.add('annuler');
+            }
+
+            visible ()
+            {
+                document.getElementById('anul').classList.remove('annuler');
+            }
+
+        }
+
+        function invisibl ()
+        {
+            var anull = new notification()
+            anull.invisible ();
+        }
+        function visibl (a,b)
+        {
+            var walid = new notification(a, b)
+            walid.alerter();
+            walid.visible ();
+        }
+        function invisiblvalid ()
+        {
+            var anull = new notification()
+            anull.invisible ();
+                if (document.getElementById('action').innerHTML == "confirmer") 
+                {
+                    document.getElementById('supprimer').click();
+                }
+                else
+                {
+                    document.getElementById('modifier').click();
+                }
+            
+        }
+     

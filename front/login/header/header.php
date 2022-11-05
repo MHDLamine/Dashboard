@@ -10,14 +10,14 @@
 integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../style/header_style.css">
+<link rel="stylesheet" href="../../style/hheader_style.css">
 
     <title></title>
 </head>
 <body>
 
-<nav class="navbar back">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg bg-light back">
+  <div class="container">
    <div class="left">
     <?php 
        
@@ -77,7 +77,17 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
   
 </nav>
   </div>
+  <!--Notification ici-->
+  <div id="anul" class="notif annuler">
+        <div class="box">
+            <a id="txt"></a>
+            <div class="ctn">
+            <button onclick="invisibl()" id="annul"  type="button" class="btn btn-danger">annuler</button>
 
+            <a onclick="invisiblvalid()"><button id="action" type="button" class="btn btn-danger"></button></a>
+            </div>
+        </div>
+    </div>
 <script src="script-header.js"></script>
 </body>
 </html>

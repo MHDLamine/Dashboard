@@ -13,11 +13,13 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../style/modifier_style.css">
+    <link rel="stylesheet" href="../../style/mmodifier_style.css">
+    <link rel="stylesheet" href="../../style/hheader_style.css">
+  
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container mdf">
         <?php if (isset($md)) {
             echo '<p id =\"para\">'.$md. '</p>';
         }  ?>
@@ -49,11 +51,13 @@
                 </br>
                 </div>
                 <div class="col-md-6">
-                <input onclick="alert('modifier')" type="submit" style="background-color: #14A3C2;" name="submit" id="submit" class="form-control" value="inscription">
+                <input id="modifier" style="display:none;" onclick="visibl('Appliquer les changements ?', 'modifier')" type="submit" style="background-color: #14A3C2;" name="submit" id="submit" class="form-control" value="inscription">
+                <input onclick="visibl('Appliquer les changements ?', 'modifier')" style="background-color: #14A3C2;text-align:center;cursor:pointer;"  id="submit" class="form-control" value="inscription">
                 </div>
             </form>
     </div>
 
     <script src="../../inscription/script.js"></script>
+    <script src="../header/script-header.js"></script>
 </body>
 </html>
