@@ -15,7 +15,7 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../style/admin_style.css">
+    <link rel="stylesheet" href="../../style/aadmin_style.css">
     <link rel="stylesheet" href="../../style/header_style.css">
   
     
@@ -131,6 +131,27 @@ else if ($row) {
         
      </tbody>
     </table>
+    <nav aria-label="Page navigation example" style="position: fixed;top:90%;float:right;">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="user.php?page=1">1</a></li>
+    <li class="page-item"><a class="page-link" href="user.php?page=2">2</a></li>
+    <li class="page-item"><a class="page-link" href="user.php?page=3">3</a></li>
+    <li class="page-item"><a class="page-link" href="user.php?page=4">4</a></li>
+    <li class="page-item"><a class="page-link" href="user.php?page=5">5</a></li>
+    <li class="page-item"><a class="page-link" href="user.php?page=6">6</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
     </div>
 
 <script src="../../script_admin.js"></script>

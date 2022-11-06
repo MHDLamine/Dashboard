@@ -101,6 +101,28 @@
         
      </tbody>
     </table>
+
+    <nav aria-label="Page navigation example" style="position: fixed;top:90%;float:right;">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="liste_archive.php?page_a=1">1</a></li>
+    <li class="page-item"><a class="page-link" href="liste_archive.php?page_a=2">2</a></li>
+    <li class="page-item"><a class="page-link" href="liste_archive.php?page_a=3">3</a></li>
+    <li class="page-item"><a class="page-link" href="liste_archive.php?page_a=4">4</a></li>
+    <li class="page-item"><a class="page-link" href="liste_archive.php?page_a=5">5</a></li>
+    <li class="page-item"><a class="page-link" href="liste_archive.php?page_a=6">6</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
     </div>
 
        

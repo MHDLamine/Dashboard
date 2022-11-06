@@ -5,9 +5,8 @@
         session_destroy();
         $_SESSION['id'] == "";
         while ($_SESSION['id'] == "") {
-          header('location:../index.php');
+          header('location:../../../index.php');
         }
-        
       }
      
     
