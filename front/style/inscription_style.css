@@ -9,15 +9,18 @@ body
     background-repeat: no-repeat;
     background-size: cover;
 }
-.ok
-{
-    color: green;
-    text-align: center;
-}
+
 h3
 {
     font-size: 33px;
     color: #14A3C2;
+    text-align: center;
+}
+#ok
+{
+    text-decoration: none;
+    color:green;
+    font-weight:bold;
     text-align: center;
 }
 .rendu

@@ -21,7 +21,7 @@
 <body>
     <div class="container mdf">
         <?php if (isset($md)) {
-            echo '<p id =\"para\">'.$md. '</p>';
+            echo $md;
         }  ?>
         <h5 style="text-align:center;padding:10px 0px;">Modifier</h5>
     <?php
@@ -51,12 +51,23 @@
                 </br>
                 </div>
                 <div class="col-md-6">
-                <input id="modifier" style="display:none;" onclick="visibl('Appliquer les changements ?', 'modifier')" type="submit" style="background-color: #14A3C2;" name="submit" id="submit" class="form-control" value="inscription">
-                <input onclick="visibl('Appliquer les changements ?', 'modifier')" style="background-color: #14A3C2;text-align:center;cursor:pointer;"  id="submit" class="form-control" value="inscription">
+                <input id="modifier" style="display:none;" type="submit" style="background-color: #14A3C2;" name="submit" id="submit" class="form-control" value="inscription">
+                <a onclick="visibl('Appliquer les changements ?', 'modifier')" style="background-color: #14A3C2;text-align:center;cursor:pointer;text-decoration:none;"  id="submit" class="form-control" value="">modifier</a>
                 </div>
             </form>
     </div>
-
+        <script>
+            a = document.getElementById('r')
+            function appui()
+            {
+                r.click()
+            }
+            if (a) 
+                {
+                    setTimeout(appui, 1000)
+                }
+            
+        </script>
     <script src="../../inscription/script.js"></script>
     <script src="../header/script-header.js"></script>
 </body>

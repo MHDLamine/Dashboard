@@ -78,12 +78,12 @@ class activeLink
             anull.invisible ();
                 if (document.getElementById('action').innerHTML == "confirmer") 
                 {
-                    document.getElementById('supprimer').click();
+                   document.getElementById('supprimer').click()
                 }
                 else
                 {
-                    document.getElementById('modifier').click();
+                   document.getElementById('modifier').click()
                 }
             
         }
-     
+

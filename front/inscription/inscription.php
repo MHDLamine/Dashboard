@@ -13,22 +13,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style/iinscription_style.css">
+    <link rel="stylesheet" href="../style/inscription_style.css">
     <title>inscription</title>
 </head>
 <body>
 
     <div class="container larg">
         <h3>Page d'inscription</h3>
-        <?php
+        <?php 
         if (isset($rendu)) {
             foreach ($rendu as $rendu) {
                 echo '<div class="rendu">'.$rendu.'</div>';
             }
         }
         if (isset($correct)) {
-        echo '<div class="ok">'.$correct.'</div>';
+        echo '<a id="ok" href="../../index.php">'.$correct.'</a>';
         }
+       
         ?>
         </br>
             <form action="" method="post" class="row g-2 " id="form"  enctype="multipart/form-data">
@@ -79,13 +80,25 @@
                  <span class="message"></span>
                  </div>
                 <div class="col-md-6">
-                <input onclick="redirection()" type="submit" name="submit" id="submit" class="form-control" value="inscription"  disabled>
+                <input  type="submit" name="submit" id="submit" class="form-control" value="inscription"  disabled>
                 </div>
             </form>
         </br>
              <a id="conn" href="../../index.php">Se connecter ?</a>
     </div>
+<script>
 
+signal = document.getElementById('ok')
+
+function clicker() {
+ 
+     signal.click()
+ }
+ if (signal) 
+ {
+     setTimeout(clicker, 2000);
+ }
+</script>
 <script src="script.js"></script>
 </body>
 </html>

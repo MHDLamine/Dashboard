@@ -47,7 +47,10 @@
 {
     margin-left:15px;
 }
-
+.right a
+{
+    padding: 10px;
+}
 a
 {
     cursor: pointer;
@@ -80,11 +83,11 @@ a:hover
 .box
 {
     background-color: #ECBC90;
-    width: 30%;
+    width: 26%;
     height: 20%;
     position: absolute;
     top: 34%;
-    left: 34%;
+    left: 38%;
     border-radius: 5px;
     padding: 10px;
 }
@@ -105,7 +108,22 @@ a:hover
     justify-content: space-around;
     align-items: baseline;
 }
-#txt
+.txt
+{
+    width: 100%;
+}
+.txt p
 {
     text-align: center;
+    font-weight: bold;
+    color: black;
 }
+
+
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        margin-left: 10px;
+    }
+  }

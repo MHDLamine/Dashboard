@@ -49,8 +49,7 @@ if(isset($_POST['submit']))
         $mat = "UPDATE  users SET matricule = '$matricule' WHERE email = '$email'";
         $modification = $conn->prepare($mat);
         $modification->execute();
-        $rendu[] = "";
-        $correct = "connexion réussi" ;
+        $correct = "<a  href=\"admin.php\"  id= \"ok\" >Inscription réussie</a></br></br>";
        
     }  
 }
