@@ -1,10 +1,11 @@
 <?php session_start();?>
 <?php include "../../../back/config.php"; ?>
 <?php include "../header/header.php"; ?>
+<?php include "../../../back/serveur_inscription.php"; ?>
 <?php
-    if (isset($_POST['tof_edit'])) {
+   /* if (isset($_POST['tof_edit'])) {
        echo "rr";
-    }
+    }*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +40,18 @@
                     <path d="M23 17C23 17.5304 22.7893 18.0391 22.4142 18.4142C22.0391 18.7893 21.5304 19 21 19H3C
                     2.46957 19 1.96086 18.7893 1.58579 18.4142C1.21071 18.0391 1 17.5304 1 17V6C1 5.46957 1.21071 4.96086 1.58579 4.58579C1.96086 4.21071 2.46957 4 3 4H7L9 1H15L17 4H21C21.5304 4 22.0391 4.21071 22.4142 4.58579C22.7893 4.96086 23 5.46957 23 6V17Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M12 15C14.2091 15 16 13.2091 16 11C16 8.79086 14.2091 7 12 7C9.79086 7 8 8.79086 8 11C8 13.2091 9.79086 15 12 15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg></br> CHANGER LA </br> PHOTO DE </br> PROFIL</p> <img src="../../inscription/photo_utilisateur/<?= $info['image']?> " alt=""> 
+                    </svg></br> CHANGER LA </br> PHOTO DE </br> PROFIL</p> <img src="../../inscription/photo_utilisateur/<?php 
+                    
+                    if ($info['image'] != NULL) {
+                        echo $info['image'];
+                    }
+                    else
+                    {
+                        echo 'default.jpg';
+                    }
+                   ?> " alt=""> 
+
+
                 </div>
                 <p id="ajr" class="v" onclick="changeimg()">mettre à jour l'image</p>
                 </div>
@@ -63,24 +75,37 @@
 
 
 
-                        <form action="update_img.php" method="get">
+                        <form action="" method="post">
+                        <input type="text"  value="<?php echo $info['id']; ?>"   name="id" style="display:none;">
+                        <input type="text" value="<?php echo $info['image']; ?>"  name="old_file" style="display:none;">
                         <input type="file" class="form-control" id="file" name="file" style="display:none;">
-                        <input id="send_img"  type="submit" name="tof_edit" id="tof_edit" class="form-control" value="Appliquer"  style="display:none;">
+                        <input id="send_img"   type="submit" name="tof_edit" id="tof_edit" class="form-control" value="Appliquer"  style="display:none;">
                         </form>
+                        <?php if(isset($success)) { echo $success ;}   ?>
+                        <a href="compte.php" id="act"></a>
                     <div class="col-md-6">
-                       
                     </div>
                     </div>
-        </div>  
+              </div>  
         </div>
 </body>
             <script>
+let actualiser = document.getElementById('act') ;
+capasse = document.getElementById('success') ;
+if (capasse) {
+    actualiser.click()
+}
+{
+    
+ 
+}
 //voir le boutton pour appliquer le changement du mpd
 let ajr = document.getElementById('ajr');
 function voir()
 {
     ajr.classList.add('voir');
 }
+
                 //ceci apparait et disparait kelk s apres apres avoir clicker sur l'image
                 let file = document.getElementById('file');
                 function choisir()

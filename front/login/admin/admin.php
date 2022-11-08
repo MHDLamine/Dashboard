@@ -176,31 +176,45 @@ else if ($row) {
         
      </tbody>
     </table>
-    <nav aria-label="Page navigation example" style="position: fixed;top:90%;float:right;">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="admin.php?page=1">1</a></li>
+         <ul>
     <?php
-     if ($select1->rowCount() > 8) 
+     if ( $select1->rowCount() > + 1 )
       {
-      ?>
-    <li class="page-item"><a class="page-link" href="admin.php?page=2">2</a></li>
-
-    <?php };
+      echo " <li class=\"page-item\"><a class=\"page-link\" href=\"admin.php?page=1\">1</a></li>";
+     };
     ?>
-    <li class="page-item"><a class="page-link" href="admin.php?page=3">3</a></li>
-    <li class="page-item"><a class="page-link" href="admin.php?page=4">4</a></li>
-    <li class="page-item"><a class="page-link" href="admin.php?page=5">5</a></li>
-    <li class="page-item"><a class="page-link" href="admin.php?page=6">6</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
+    <?php
+     if ( $select1->rowCount() >  ($limit + 1) )
+      {
+      echo " <li class=\"page-item\"><a class=\"page-link\" href=\"admin.php?page=2\">2</a></li>";
+     };
+    ?>
+      <?php
+     if ( $select1->rowCount() > (($limit *2) + 1) )
+      {
+      echo " <li class=\"page-item\"><a class=\"page-link\" href=\"admin.php?page=3\">3</a></li>";
+     };
+    ?>
+       <?php
+     if ($select1->rowCount() >(($limit *3) + 1) )
+      {
+      echo " <li class=\"page-item\"><a class=\"page-link\" href=\"admin.php?page=4\">4</a></li>";
+     };
+    ?>
+       <?php
+     if( $select1->rowCount() > (($limit *4) + 1) )
+      {
+      echo " <li class=\"page-item\"><a class=\"page-link\" href=\"admin.php?page=5\">5</a></li>";
+     };
+    ?>
+       <?php
+     if (  $select1->rowCount() > (($limit *5) + 1) )
+      {
+      echo " <li class=\"page-item\"><a class=\"page-link\" href=\"admin.php?page=6\">6</a></li>";
+     };
+    ?>
+
+  
   </ul>
 </nav>
 
