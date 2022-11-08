@@ -20,16 +20,11 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
   <div class="container">
    <div class="left">
     <?php 
-       
          $id = $_SESSION['id'];
          $user_ = "SELECT * from users WHERE id = $id";
          $user_info = $conn->prepare($user_);
          $user_info->execute();
-         $info = $user_info->fetchAll(PDO::FETCH_ASSOC);
-         if ($info) {
-            foreach ($info as $info) {
-                
-    
+         $info = $user_info->fetch(PDO::FETCH_ASSOC);
     ?>
     <?php
     if ($info['image'] != NULL) 
@@ -57,13 +52,11 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
             <?php }; ?></p>
     </div>
    </div>
-   <?php  
-           };
-        }; 
-    ?>
+  
     <div class="right">
         <a href="admin.php" id="user">Utilisateur</a>
         <a href="liste_archive.php"  id="archive">Archive</a>
+        <a href="compte.php"  id="compte">compte</a>
         <a href="../../../back/serveur_deconnexion.php?logout=1">
         <svg width="30" height="41" viewBox="0 0 46 51" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g style="mix-blend-mode:darken">

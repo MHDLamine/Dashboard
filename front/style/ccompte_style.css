@@ -1,0 +1,73 @@
+body
+{
+    background-color: #14A3C2;;
+}
+#ecompte
+{
+    padding: 10px;
+    background-color: #F8F9FA;
+}
+#ecompte p:not(.bb)
+{
+    color: black;
+}
+.result
+{
+    font-weight: bold;
+}
+.img_edit
+{
+    margin-left: 10px;
+    position: relative;
+}
+.img_edit p
+{
+    opacity: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    background-color:#00000094;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.img_edit p:hover{opacity: 1;}
+#tof
+{
+    position: absolute;
+    top: 49px;
+}
+.pp
+{
+    color: white;
+}
+.img_edit img
+{
+    width: 200px;
+    height: 200px;
+    border: 2px solid #14A3C2;
+    border-radius: 50%;
+    cursor: pointer;
+  
+    
+}
+#mdp_edit
+{
+    background-color:#14A3C2;
+    color: white;
+}
+
+.v{
+    display: none;
+    text-decoration: underline;
+    color:#14A3C2;
+    cursor:pointer;
+}
+.voir
+{
+   display: flex;
+}

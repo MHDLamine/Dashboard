@@ -13,7 +13,9 @@ if(isset($_POST['submit']))
     $nom = test_input($_POST['nom']);
     $email = test_input($_POST['email']);
     $role = test_input($_POST['role']);
-    $mdp =  test_input($_POST['mdp']);
+    $passe =  test_input($_POST['mdp']);
+    $mdp = password_hash($passe,PASSWORD_DEFAULT);
+
    
 
     $image = $_FILES['img']['name'];

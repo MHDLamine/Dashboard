@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../style/mmodifier_style.css">
     <link rel="stylesheet" href="../../style/hheader_style.css">
+    <link rel="stylesheet" href="../../style/modifier_style.css">
   
     <title>Document</title>
 </head>
