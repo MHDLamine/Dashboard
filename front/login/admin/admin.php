@@ -29,7 +29,7 @@
         </style>
 <div class="container">
    
-        <form  class="d-flex" role="search" style="padding-bottom:10px;padding-top:10px;">
+        <form method="post" action=""  class="d-flex" role="search" style="padding-bottom:10px;padding-top:10px;">
             <input class="form-control" type="text" name="search" placeholder="Search" aria-label="Search">
             <div class="btn-search" >
             <input class="form-control" type="hidden" name="submit" type="submit">
@@ -55,9 +55,8 @@
     <tbody  class="tbody">
     <?php
      if (isset($_POST['search'])) {
-     
-                
-echo "br"
+        foreach ($row as $row) {
+
         ?>
 
 <tr>
@@ -103,6 +102,7 @@ echo "br"
         </tr>
         
         <?php
+        }
             }
 else if ($row) {
             foreach ($row as $row) {
@@ -178,7 +178,7 @@ else if ($row) {
     </table>
     <ul style="position: absolute; top:470px;" class="pagination">
     <?php
-  
+    if (!(isset($_POST['search']))){
   if ( $select1->rowCount() >  0 ){
      echo " <li class=\"page-item\"><a class=\"page-link\" href=\"admin.php?page=1\">1</a></li>";
   }
@@ -207,6 +207,7 @@ else if ($row) {
       {
       echo " <li class=\"page-item\"><a class=\"page-link\" href=\"admin.php?page=6\">6</a></li>";
      }
+    }
     ?>
      </ul>
 

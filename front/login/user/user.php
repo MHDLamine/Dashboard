@@ -15,20 +15,20 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../style/aadmin_style.css">
+    <link rel="stylesheet" href="../../style/admin_style.css">
     <link rel="stylesheet" href="../../style/header_style.css">
   
     
 </head>
 <body>
         <style>
-        #archive, #user
+        #archive, #user,#compte
             {
                display: none;
             }
         </style>
 <div class="container">
-        <form  class="d-flex" role="search" style="padding-bottom:10px;padding-top:10px;">
+        <form action="" method="post"  class="d-flex" role="search" style="padding-bottom:10px;padding-top:10px;">
             <input class="form-control" type="text" name="search" placeholder="Search" aria-label="Search">
             <div class="btn-search">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +53,7 @@
     <tbody  class="tbody">
     <?php
      if (isset($_POST['search'])) {
-           
+      foreach ($row as $row) {
                 
 
         ?>
@@ -83,6 +83,7 @@
         
         <?php
             }
+          }
 else if ($row) {
             foreach ($row as $row) {
                 
@@ -133,7 +134,7 @@ else if ($row) {
     </table>
     <ul style="position: absolute; top:470px;" class="pagination">
     <?php
-  
+   if (!(isset($_POST['search']))) {
   if ( $select1->rowCount() >  0 ){
      echo " <li class=\"page-item\"><a class=\"page-link\" href=\"user.php?page=1\">1</a></li>";
   }
@@ -162,6 +163,7 @@ else if ($row) {
       {
       echo " <li class=\"page-item\"><a class=\"page-link\" href=\"user.php?page=6\">6</a></li>";
      }
+    }
     ?>
      </ul>
 

@@ -1,7 +1,7 @@
 <?php
-    if (isset($_GET['search'])) {
-     if ($_GET['search'] != ""){
-        $search = $_GET['search'];
+    if (isset($_POST['search'])) {
+     if ($_POST['search'] != ""){
+        $search = $_POST['search'];
         $sql_a = "SELECT * from users WHERE etat = 0  AND id != $id AND matricule lIKE '%$search%'";
         $select_a = $conn->prepare($sql_a);
         $select_a->execute();

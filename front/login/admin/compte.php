@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style/header_style.css">
-    <link rel="stylesheet" href="../../style/ccompte_style.css">
+    <link rel="stylesheet" href="../../style/compte_style.css">
     <title></title>
 </head>
 <body>
@@ -56,6 +56,15 @@
                 <p id="ajr" class="v" onclick="changeimg()">mettre à jour l'image</p>
                 </div>
                 <div class="col-4">
+                    <?php
+                    if (isset($_echo)) {
+                        echo  "<p style=\"color:red;\">". $_echo."</p>";
+                    }
+                    if (isset($_echoW)) {
+                        echo "<p style=\"color:green;\">". $_echoW."</p>";
+                    }
+
+                    ?>
                     <form action="" method="post" class="row g-2 " id="form"  enctype="multipart/form-data">
                     <div class="col-md-8">
                         <label for="mdp" class="form-label"> mot de passe actuelle<span id="mdplab">*</span></label>

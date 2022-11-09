@@ -1,10 +1,10 @@
  <?php
 
     {
-        if (isset($_GET['search'])) {
+        if (isset($_POST['search'])) {
 
-            if ($_GET['search'] != ""){
-                $search = $_GET['search'];
+            if ($_POST['search'] != ""){
+                $search = $_POST['search'];
                 $sql = "SELECT * from users WHERE etat = 1  AND id != $id AND matricule lIKE '%$search%' OR email like '%$search%' ";
                 $select = $conn->prepare($sql);
                 $select->execute();

@@ -51,19 +51,19 @@ if (isset($_POST['tof_edit'])) {
        
     
        if (password_verify($ancien_mdp, $row['mdp']) != 1) {
-        echo "le mot de passe est invalide";
+        $_echo = "le mot de passe est invalide";
        }
        else
        {
             if ($ancien_mdp == $new_mdp) {
-                echo "les mots de passe sont identique";
+                $_echo = "les mots de passe sont identique";
             }
             else {
                 $hass = password_hash($new_mdp,PASSWORD_DEFAULT);
                 $up = "UPDATE  users SET mdp = ? WHERE id = $id";
                 $modification = $conn->prepare($up);
                 $modification->execute([$hass]);
-                echo "Modification réussie";
+                $_echoW = "Modification réussie";
             }
        }
        
