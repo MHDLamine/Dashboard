@@ -15,7 +15,7 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../style/aadmin_style.css">
+    <link rel="stylesheet" href="../../style/admin_style.css">
     <link rel="stylesheet" href="../../style/header_style.css">
   
     
@@ -176,47 +176,39 @@ else if ($row) {
         
      </tbody>
     </table>
-         <ul>
+         <ul style="position: absolute; top:470px;" class="pagination">
     <?php
-     if ( $select1->rowCount() > + 1 )
-      {
-      echo " <li class=\"page-item\"><a class=\"page-link\" href=\"admin.php?page=1\">1</a></li>";
-     };
-    ?>
-    <?php
-     if ( $select1->rowCount() >  ($limit + 1) )
+  
+  if ( $select1->rowCount() >  0 ){
+     echo " <li class=\"page-item\"><a class=\"page-link\" href=\"admin.php?page=1\">1</a></li>";
+  }
+     $a = 6;
+     if ( $select1->rowCount() >  $a + 1 )
       {
       echo " <li class=\"page-item\"><a class=\"page-link\" href=\"admin.php?page=2\">2</a></li>";
-     };
-    ?>
-      <?php
-     if ( $select1->rowCount() > (($limit *2) + 1) )
+     }
+   
+     if ( $select1->rowCount() > ($a * 2) + 1 )
       {
       echo " <li class=\"page-item\"><a class=\"page-link\" href=\"admin.php?page=3\">3</a></li>";
-     };
-    ?>
-       <?php
-     if ($select1->rowCount() >(($limit *3) + 1) )
+     }
+    
+     if ($select1->rowCount() > ($a * 3) + 1 )
       {
       echo " <li class=\"page-item\"><a class=\"page-link\" href=\"admin.php?page=4\">4</a></li>";
-     };
-    ?>
-       <?php
-     if( $select1->rowCount() > (($limit *4) + 1) )
+     }
+  
+     if( $select1->rowCount() > ($a * 4) + 1 )
       {
       echo " <li class=\"page-item\"><a class=\"page-link\" href=\"admin.php?page=5\">5</a></li>";
-     };
-    ?>
-       <?php
-     if (  $select1->rowCount() > (($limit *5) + 1) )
+     }
+  
+     if (  $select1->rowCount() > ($a * 5) + 1 )
       {
       echo " <li class=\"page-item\"><a class=\"page-link\" href=\"admin.php?page=6\">6</a></li>";
-     };
+     }
     ?>
-
-  
-  </ul>
-</nav>
+     </ul>
 
     </div>
 

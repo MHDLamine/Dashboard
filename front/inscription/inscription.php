@@ -34,8 +34,8 @@
         </br>
             <form action="" method="post" class="row g-2 " id="form"  enctype="multipart/form-data">
                 <div  class="col-md-6" class="form-floating">
-                <label for="prenom" class="form-label" >Prénom <span id="prenomlab">*</span> </label>
-                <input type="text"  onkeyup="prenomf();" class="form-control" name="prenom" id="prenom" >
+                <label  for="prenom" class="form-label" >Prénom <span id="prenomlab">*</span> </label>
+                <input type="text"   onkeyup="prenomf();" class="form-control" name="prenom" id="prenom" >
                 <span class="message"></span>
                 </br>
                 </div>

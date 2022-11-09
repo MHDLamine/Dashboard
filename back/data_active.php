@@ -18,11 +18,10 @@
             $sql1 = "SELECT * from users WHERE  etat = 1  AND id != $id ";
             $select1 = $conn->prepare($sql1);
             $select1->execute();
-            $limit = round( $select1->rowCount() / 6);
-        
+            $limit = 6;
+            
 
-
-            $sql = "SELECT * from users WHERE  etat = 1  AND id != $id LIMIT  $limit";
+            $sql = "SELECT * from users WHERE  etat = 1  AND id != $id LIMIT  6";
             $select = $conn->prepare($sql);
             $select->execute();
             $row = $select->fetchAll(PDO::FETCH_ASSOC);

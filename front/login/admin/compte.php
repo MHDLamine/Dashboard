@@ -1,7 +1,7 @@
 <?php session_start();?>
 <?php include "../../../back/config.php"; ?>
 <?php include "../header/header.php"; ?>
-<?php include "../../../back/serveur_inscription.php"; ?>
+<?php include "../../../back/update_compte.php"; ?>
 <?php
    /* if (isset($_POST['tof_edit'])) {
        echo "rr";

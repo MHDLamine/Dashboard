@@ -48,4 +48,8 @@ body{
 {
     display: none;
 }
-
+ul .pagination
+{
+    position: absolute;
+    top: 10px;
+}

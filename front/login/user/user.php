@@ -131,26 +131,39 @@ else if ($row) {
         
      </tbody>
     </table>
-    <nav aria-label="Page navigation example" style="position: fixed;top:90%;float:right;">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="user.php?page=1">1</a></li>
-    <li class="page-item"><a class="page-link" href="user.php?page=2">2</a></li>
-    <li class="page-item"><a class="page-link" href="user.php?page=3">3</a></li>
-    <li class="page-item"><a class="page-link" href="user.php?page=4">4</a></li>
-    <li class="page-item"><a class="page-link" href="user.php?page=5">5</a></li>
-    <li class="page-item"><a class="page-link" href="user.php?page=6">6</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+    <ul style="position: absolute; top:470px;" class="pagination">
+    <?php
+  
+  if ( $select1->rowCount() >  0 ){
+     echo " <li class=\"page-item\"><a class=\"page-link\" href=\"user.php?page=1\">1</a></li>";
+  }
+     $a = 6;
+     if ( $select1->rowCount() >  $a + 1 )
+      {
+      echo " <li class=\"page-item\"><a class=\"page-link\" href=\"user.php?page=2\">2</a></li>";
+     }
+   
+     if ( $select1->rowCount() > ($a * 2) + 1 )
+      {
+      echo " <li class=\"page-item\"><a class=\"page-link\" href=\"user.php?page=3\">3</a></li>";
+     }
+    
+     if ($select1->rowCount() > ($a * 3) + 1 )
+      {
+      echo " <li class=\"page-item\"><a class=\"page-link\" href=\"user.php?page=4\">4</a></li>";
+     }
+  
+     if( $select1->rowCount() > ($a * 4) + 1 )
+      {
+      echo " <li class=\"page-item\"><a class=\"page-link\" href=\"admin.php?page=5\">5</a></li>";
+     }
+  
+     if (  $select1->rowCount() > ($a * 5) + 1 )
+      {
+      echo " <li class=\"page-item\"><a class=\"page-link\" href=\"user.php?page=6\">6</a></li>";
+     }
+    ?>
+     </ul>
 
     </div>
 

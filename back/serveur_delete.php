@@ -3,7 +3,7 @@
 
 <?php 
     $id = $_GET['id'];
-    $date = date('d-m-y h:i:s');
+    $date = date("Y-m-d h:i:sa");
     $delete = "UPDATE users SET etat = 0, date_suppression = '$date'  WHERE id = $id";
     $sup = $conn->prepare($delete);
     $sup->execute();
