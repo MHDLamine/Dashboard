@@ -15,7 +15,7 @@
         $select_all = $conn->prepare($sql_mail);
         $select_all->execute([$email]);
         $row = $select_all->fetch(PDO::FETCH_ASSOC);
-          
+        
           if ($select_all->rowCount() > 0) {
             if($row['etat'] == 0){
               $message [] = 'l\'utilisateur n\'existe plus';

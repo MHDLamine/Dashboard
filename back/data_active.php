@@ -9,8 +9,6 @@
                 $select = $conn->prepare($sql);
                 $select->execute();
                 $row = $select->fetchAll(PDO::FETCH_ASSOC); }
-            
-    
         }
         else 
         {

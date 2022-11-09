@@ -59,24 +59,25 @@
                     <form action="" method="post" class="row g-2 " id="form"  enctype="multipart/form-data">
                     <div class="col-md-8">
                         <label for="mdp" class="form-label"> mot de passe actuelle<span id="mdplab">*</span></label>
-                        <input type="password" class="form-control" name="mdp" id="mdp"   onkeyup="mdpf();">
+                        <input type="hidden"  value="<?php echo $info['id']; ?>"   name="id_user" style="display:none;">
+                        <input type="password" class="form-control" name="mdp" id="mdp">
                         <span class="message"></span>
                         </br>
                     </div>
                         <div class="col-md-8">
                         <label for="confirm_mdp" class="form-label">nouveau mot de passe <span id="mdpclab">*</span></label>
-                        <input type="password" class="form-control" id="confirm_mdp"   onkeyup="confirm_mdpf();">
+                        <input type="password" class="form-control" name="mdp_c" id="confirm_mdp">
                         <span class="message"></span>
                         </br>
                     </div>
                     <div class="col-md-6">
-                        <input  type="submit" name="mdp_edit" id="mdp_edit" class="form-control" value="modifier"  disabled>
+                        <input  type="submit" name="mdp_edit" id="mdp_edit" class="form-control" value="modifier" >
                     </div>
 
 
-
+                        
                         <form action="" method="post">
-                        <input type="text"  value="<?php echo $info['id']; ?>"   name="id" style="display:none;">
+                        <input type="hidden"  value="<?php echo $info['id']; ?>"   name="id" style="display:none;">
                         <input type="text" value="<?php echo $info['image']; ?>"  name="old_file" style="display:none;">
                         <input type="file" class="form-control" id="file" name="file" style="display:none;">
                         <input id="send_img"   type="submit" name="tof_edit" id="tof_edit" class="form-control" value="Appliquer"  style="display:none;">

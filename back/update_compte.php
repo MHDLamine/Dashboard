@@ -28,4 +28,44 @@ if (isset($_POST['tof_edit'])) {
     }
      
 }
+
+    //modifier mdp
+    if (isset($_POST['mdp_edit'])) 
+    {
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+          } 
+
+        $id = $_POST['id_user'];
+        $ancien_mdp = test_input($_POST['mdp']);
+        $new_mdp = test_input($_POST['mdp_c']);
+      
+
+        $user_sql = "SELECT * from users WHERE id = ?";
+        $sel = $conn->prepare($user_sql);
+        $sel->execute([$id]);
+        $row = $sel->fetch(PDO::FETCH_ASSOC);
+       
+    
+       if (password_verify($ancien_mdp, $row['mdp']) != 1) {
+        echo "le mot de passe est invalide";
+       }
+       else
+       {
+            if ($ancien_mdp == $new_mdp) {
+                echo "les mots de passe sont identique";
+            }
+            else {
+                $hass = password_hash($new_mdp,PASSWORD_DEFAULT);
+                $up = "UPDATE  users SET mdp = ? WHERE id = $id";
+                $modification = $conn->prepare($up);
+                $modification->execute([$hass]);
+                echo "Modification réussie";
+            }
+       }
+       
+    }
 ?>

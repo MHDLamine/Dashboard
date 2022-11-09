@@ -176,7 +176,7 @@ else if ($row) {
         
      </tbody>
     </table>
-         <ul style="position: absolute; top:470px;" class="pagination">
+    <ul style="position: absolute; top:470px;" class="pagination">
     <?php
   
   if ( $select1->rowCount() >  0 ){
