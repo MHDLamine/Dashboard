@@ -31,11 +31,11 @@ class verification
     }
     resultmdp ()
     {
-        if ( (this.input.value).length < 8 )
+        if ( this.input.value =="")
         {
          this.input.classList.remove("is-valid");
          this.input.classList.add("is-invalid");
-         this.message.innerHTML = "le mot de passe doit contenir au minimum 8 caractères"
+         this.message.innerHTML = "ce champs est requis";
          this.message.style.color = "red"
          this.x--;
          return this.x;
