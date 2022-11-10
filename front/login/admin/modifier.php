@@ -72,7 +72,7 @@
             }
             if (a) 
                 {
-                    setTimeout(appui, 1000)
+                    setTimeout(appui, 4000)
                 }
             
                 </script>
