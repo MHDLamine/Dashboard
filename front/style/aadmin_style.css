@@ -23,7 +23,7 @@ body{
 }
 .btn-search
 {
-    height: inherit;
+    height: 29px;
     width:30px;
     background-color: #ECBC90;
 }

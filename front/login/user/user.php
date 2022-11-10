@@ -15,7 +15,7 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../style/admin_style.css">
+    <link rel="stylesheet" href="../../style/aadmin_style.css">
     <link rel="stylesheet" href="../../style/header_style.css">
   
     
@@ -28,17 +28,23 @@
             }
         </style>
 <div class="container">
+
         <form action="" method="post"  class="d-flex" role="search" style="padding-bottom:10px;padding-top:10px;">
             <input class="form-control" type="text" name="search" placeholder="Search" aria-label="Search">
-            <div class="btn-search">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M21.0004 21L16.6504 16.65" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            </div>
-            
+            <button  style="padding:0px;border:none;opacity:1px;" type="submit" name="submit">
+              <div class="btn-search">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21.0004 21L16.6504 16.65" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              </div>
+            </button>
         </form>
-    
+        <?php
+            if (isset($retour_user)) {
+                echo $retour_user;
+            }
+        ?>
     <table class="table" >
         <thead class="col">
             <tr>
@@ -51,8 +57,13 @@
             </tr>
         </thead>
     <tbody  class="tbody">
+            <?php
+                if (isset( $notexiste)) {
+                    echo $notexiste;
+                }
+                ?>
     <?php
-     if (isset($_POST['search'])) {
+     if (isset($_POST['submit'])) {
       foreach ($row as $row) {
                 
 
@@ -166,7 +177,7 @@ else if ($row) {
     }
     ?>
      </ul>
-
+    
     </div>
 
 <script src="../../script_admin.js"></script>

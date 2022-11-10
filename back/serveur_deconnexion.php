@@ -1,7 +1,9 @@
 <?php
-        session_start();
+    
         if( isset($_GET['logout']) && $_GET['logout'] == 1 ) {
-        session_destroy();
+          session_start();
+          session_unset();
+          session_destroy();
         $d = "<a id=\"d\" href=\"../index.php\"></a>";
         
       }

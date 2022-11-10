@@ -20,6 +20,13 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="admin.php" style="padding: 10px;">
+    <svg width="35" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.95 34.4858L7.41421 23.95L17.95 13.4142L18.6858 14.15L11.0929 21.7429L9.38579 23.45H11.8H41V24.45H11.8H9.38579L11.0929 26.1571L18.6858 33.75L17.95 34.4858Z" fill="#EBF4ED" stroke="#EBF4ED" stroke-width="2"/>
+</svg>
+
+
+    </a>
     <div class="container mdf">
         <?php if (isset($md)) {
             echo $md;
@@ -68,8 +75,8 @@
                     setTimeout(appui, 1000)
                 }
             
-        </script>
-    <script src="../../inscription/script.js"></script>
+                </script>
+   <script src="../../inscription/script.js"></script>
     <script src="../header/script-header.js"></script>
 </body>
 </html>

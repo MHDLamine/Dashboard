@@ -1,14 +1,22 @@
  <?php
 
     {
-        if (isset($_POST['search'])) {
-
-            if ($_POST['search'] != ""){
+        if (isset($_POST['submit']) && isset($_POST['search']) &&  $_POST['search'] != "") {
+            $retour= "<a style=\"background-color:white;\" href=\"admin.php\">liste</a>";
+            $retour_user = "<a style=\"background-color:white;\" href=\"user.php\">Liste</a>";
+           
                 $search = $_POST['search'];
                 $sql = "SELECT * from users WHERE etat = 1  AND id != $id AND matricule lIKE '%$search%' OR email like '%$search%' ";
                 $select = $conn->prepare($sql);
                 $select->execute();
-                $row = $select->fetchAll(PDO::FETCH_ASSOC); }
+                    if ( $select->rowCount() == 0 ) {
+                        $notexiste = "<p style=\"color:white;\">l'utilisateur " . $search. " n'existe pas</p>";
+                    }
+                
+               
+                $row = $select->fetchAll(PDO::FETCH_ASSOC);
+                $select1 = $select;
+                $select1->execute();
         }
         else 
         {
