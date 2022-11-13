@@ -92,7 +92,9 @@
                         <input id="send_img"   type="submit" name="tof_edit" id="tof_edit" class="form-control" value="Appliquer"  style="display:none;">
                         </form>
                         <?php if(isset($success)) { echo $success ;}   ?>
+
                         <a href="compte.php" id="act"></a>
+                        
                     <div class="col-md-6">
                     </div>
                     </div>
